@@ -1,0 +1,13 @@
+description = "Documentation lookup skill. Find library docs and usage examples."
+
+prompt = """
+This command invokes the **documentation-lookup** skill to find relevant documentation for a library or framework.
+
+## How to Use
+1. Provide the library name and the specific topic you're looking for.
+2. The agent will use live documentation (when available) to provide an accurate answer.
+
+Apply the `documentation-lookup` skill.
+
+User Request: {{args}}
+"""

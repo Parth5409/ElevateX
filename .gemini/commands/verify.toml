@@ -1,0 +1,16 @@
+description = "Verify the codebase (build, types, lint, tests, security)."
+
+prompt = """
+This command invokes the **verification-loop** skill to ensure the codebase is in a valid state.
+
+## Verification Steps
+1. **Build** - Verify the project builds successfully.
+2. **Types** - Run type checking.
+3. **Lint** - Run linting tools.
+4. **Tests** - Run the test suite.
+5. **Security** - Check for security vulnerabilities.
+
+Apply the `verification-loop` skill.
+
+User Request: {{args}}
+"""

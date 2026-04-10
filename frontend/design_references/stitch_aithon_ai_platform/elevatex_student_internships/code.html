@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>elevateX | Student Internships</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#3c0800",
+                        "surface-container-low": "#1c1b19",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#171c1f",
+                        "secondary-fixed-dim": "#cfc5ba",
+                        "outline": "#aa8981",
+                        "on-surface": "#e6e2dd",
+                        "on-secondary-fixed-variant": "#4c463d",
+                        "surface-container-lowest": "#0f0e0b",
+                        "on-primary-fixed-variant": "#881f00",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#141311",
+                        "secondary-container": "#4c463d",
+                        "on-tertiary-fixed-variant": "#42474b",
+                        "tertiary-fixed-dim": "#c2c7cb",
+                        "on-background": "#e6e2dd",
+                        "tertiary-fixed": "#dee3e7",
+                        "surface-container": "#21201c",
+                        "on-primary": "#611300",
+                        "on-tertiary-container": "#252a2e",
+                        "secondary": "#cfc5ba",
+                        "error-container": "#93000a",
+                        "tertiary": "#c2c7cb",
+                        "surface-bright": "#3a3936",
+                        "primary-container": "#fa5b31",
+                        "surface": "#141311",
+                        "tertiary-container": "#8c9195",
+                        "background": "#141311",
+                        "surface-container-highest": "#363531",
+                        "secondary-fixed": "#ebe1d5",
+                        "surface-tint": "#ffb4a1",
+                        "on-primary-container": "#550f00",
+                        "primary-fixed-dim": "#ffb4a1",
+                        "primary": "#ffb4a1",
+                        "surface-variant": "#363531",
+                        "primary-fixed": "#ffdbd1",
+                        "on-surface-variant": "#e3beb5",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e6e2dd",
+                        "on-secondary-container": "#bdb4a9",
+                        "on-secondary": "#353028",
+                        "on-tertiary": "#2c3134",
+                        "surface-container-high": "#2b2a27",
+                        "outline-variant": "#5a413a",
+                        "on-secondary-fixed": "#201b14",
+                        "inverse-primary": "#b22b00",
+                        "inverse-on-surface": "#32302d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(33, 32, 28, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .ai-glow {
+            box-shadow: 0 0 15px -3px rgba(250, 91, 49, 0.15);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #141311; }
+        ::-webkit-scrollbar-thumb { background: #363531; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- SideNavBar Execution -->
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-white/5 bg-[#1c1b19] flex flex-col z-50">
+<div class="p-8">
+<h1 class="text-2xl font-black tracking-tighter text-[#fa5b31]">elevateX</h1>
+<p class="font-['Inter'] font-medium text-[10px] uppercase tracking-[0.2em] text-secondary mt-1 opacity-60">Kinetic Intelligence</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 hover:scale-[1.02] transition-transform duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Intelligence</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#21201c] text-[#fa5b31] rounded-lg border-l-4 border-[#fa5b31] hover:scale-[1.02] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Placements</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 hover:scale-[1.02] transition-transform duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Training</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 hover:scale-[1.02] transition-transform duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 hover:scale-[1.02] transition-transform duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-[#21201c] rounded-xl p-4 mb-4">
+<p class="text-xs font-bold text-white mb-2">Upgrade to Pro</p>
+<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-2/3 h-full bg-[#fa5b31]"></div>
+</div>
+</div>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar Execution -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 z-40 bg-[#141311]/60 backdrop-blur-3xl flex justify-between items-center px-8">
+<div class="flex items-center gap-8 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary/40 text-sm">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-[10px] font-bold tracking-widest text-secondary focus:ring-1 focus:ring-primary-container transition-all" placeholder="SEARCH INTELLIGENCE..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-white/10 rounded-full p-2 transition-all">
+<span class="material-symbols-outlined text-secondary">notifications</span>
+</button>
+<button class="hover:bg-white/10 rounded-full p-2 transition-all">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden ml-2 border border-white/10">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional portrait of a creative individual in a modern dark-themed studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhs0mrvb1hLKV6d5Fqv3kaKHbZsaQC49jA3rsYxi22y2KqDeyrLlV5ib-O7YHpF6wMaT69Y9c3LEn8TY3VDO4FtgTFymf0IDSl-p3xOkqhHVEScRxjkBeYoJFXcuKH8S7udtbUIGtmtz1yRdCThcd_g8i7GQ9ZvEUB9yQoAmJljKAxFlqWogVYevjF3mCch8OssZIB2UvGids0RyfqNbvXW2bAugHYvI-M-UvjEMuLFvGvToPqUe6EYrf9FPrk9CtnAZirv0nmFuQ"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="pt-24 px-8 pb-12">
+<!-- Hero Header -->
+<div class="mb-12 flex justify-between items-end">
+<div>
+<span class="font-['Inter'] font-bold uppercase tracking-[0.3em] text-[10px] text-[#fa5b31]">Student Internships</span>
+<h2 class="text-5xl font-black tracking-tighter mt-2">Placements <span class="text-white/20">&amp;</span> Engagements</h2>
+</div>
+<div class="flex gap-4">
+<div class="text-right">
+<p class="text-[10px] font-bold text-secondary/40 uppercase tracking-widest">Active Nodes</p>
+<p class="text-2xl font-black">12</p>
+</div>
+<div class="w-px h-8 bg-white/10 mx-2 self-center"></div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-secondary/40 uppercase tracking-widest">Success Rate</p>
+<p class="text-2xl font-black text-[#fa5b31]">94%</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Left: New Internship Form -->
+<div class="col-span-12 lg:col-span-5">
+<div class="glass-panel p-8 rounded-2xl border border-white/5 ai-glow h-full">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-[#fa5b31]">add_circle</span>
+                            Initiate Engagement
+                        </h3>
+<form class="space-y-6">
+<div>
+<label class="block text-[10px] font-bold text-secondary/60 uppercase tracking-widest mb-2">Target Corporation</label>
+<input class="w-full bg-surface-container border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="e.g. Neuralink, Aesthetic Labs" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-[10px] font-bold text-secondary/60 uppercase tracking-widest mb-2">Domain</label>
+<select class="w-full bg-surface-container border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary-container/20 transition-all appearance-none">
+<option>AI Research</option>
+<option>Neural Interfaces</option>
+<option>Bio-Design</option>
+<option>Quantum Computing</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-secondary/60 uppercase tracking-widest mb-2">Duration</label>
+<select class="w-full bg-surface-container border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary-container/20 transition-all appearance-none">
+<option>3 Months</option>
+<option>6 Months</option>
+<option>Indefinite</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-[10px] font-bold text-secondary/60 uppercase tracking-widest mb-2">Brief &amp; Intent</label>
+<textarea class="w-full bg-surface-container border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Describe the kinetic value of this placement..." rows="4"></textarea>
+</div>
+<button class="w-full bg-[#fa5b31] text-white font-black py-4 rounded-xl hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary-container/20 uppercase tracking-widest text-xs" type="submit">
+                                Submit Placement Proposal
+                            </button>
+</form>
+</div>
+</div>
+<!-- Right: Active Engagements Bento -->
+<div class="col-span-12 lg:col-span-7 grid grid-cols-2 gap-6">
+<!-- Card 1 -->
+<div class="col-span-2 md:col-span-1 glass-panel rounded-2xl overflow-hidden group border border-white/5">
+<div class="h-32 relative">
+<img alt="Neuralink" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="futuristic circuit board with blue neon lights glowing in a dark high-tech environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQwkGheYAzuyW6mIFSe-ptaPLiy6BqbdgL3BBmATRqrrHj-L6kb4Gq8x312vU7w6NWMxE8xQPYu7LRhBOS9FbT-wGbOtdmwUUTgpaVTnPf_l1gBykPrvWK2h6oPMXd461BqJ47rr7GYgrZp_v8_3ZdxOG5hc3RPZx_UjBli-ehLAXIIW8KmRm5RJljgumtRidv0z-zYD0-SOeXJE_KBgmOSL_FeiFDz9-8Wok5peN1WtQOOgPLBAzxnX5oOQNsa_i7RQujjRUHQc4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#21201c] to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="inline-block px-2 py-1 rounded bg-primary-container/20 text-[#fa5b31] text-[10px] font-bold uppercase tracking-widest">Active Engagement</span>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold">Neuralink Systems</h4>
+<p class="text-secondary/60 text-xs mt-2 leading-relaxed">Assigned to Neural Mapping &amp; Signal Optimization for MK-IV devices.</p>
+<div class="mt-6 flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-surface-container overflow-hidden">
+<img alt="team" class="w-full h-full object-cover" data-alt="headshot of a male researcher" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxCHBtIluOKsewcGbqydNn8TOMTgW6LGneOUg76fj1XlqKVpiA9WeTiQFv9dUnHlUFrFwuyCTtlu4UslLt77tYt2VWmdzQvVGP5SMpM75dCJ8yU0lJUo0cFOQJEHQxb5vA6NUcnKLONo8P2_SEsv1r6y0Y7mmDkCk0hFHioXupCDVQFoT1t6cqCHpKLnZBxyTYwm6vM8Ij3QnodcEco1rvVPAMshHZgt5cLihPaYzCnC_Suq9XrrsXM-op_HmKwd9N6M0Z35iOD1o"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container overflow-hidden">
+<img alt="team" class="w-full h-full object-cover" data-alt="headshot of a female engineer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_iS4qL32fTgkEQpen4ZVN_vkAmMoNAUVUjeMV2wNEEut5l5gl8xph5aMft5kXN11tHbzBA8TTdP9bEIe2v5G1vUCXlvVunAA62kejtsKsvgKZSgfWZgA1qC0p86Hag0AQ6alvw9RZdAO0X4s_i78x3QuQMnv5sByjbJOKsfO0tMJuOPOy2HMooQD3sHqlCS1-9Q7uYI72tTb9rF_TWBKvPd8IsDSzhQBRVUcaAdlC4JJDwIkirf_oaGBPdcqG4rqkNNCt-YqgCdY"/>
+</div>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest">48 Days Remaining</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="col-span-2 md:col-span-1 glass-panel rounded-2xl overflow-hidden group border border-white/5">
+<div class="h-32 relative">
+<img alt="Aesthetic Labs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="clean minimal laboratory with glass equipment and warm amber lighting reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4AkJNLtaaXgluAvV2_Aodm0AW_LN7dWsgJg5WREL0ogwbiK7qxGDqpb5pypWp4VdanmPBWijp0NjAvwyOG1JRFAIfoDg8dzNXxElaDZ8et5cTQyXs1poQ9dNHlYokb6TFw-hlR5tSIPBR7aYQlgx22B8eFsERNL5yNtwIeRs27pmxYWBLKV5sXTgpRBoDVhkQYpeISILZRYtmL2z3oWSdWH9ShOphU-V0lxXPBxfZpbls-xfw2JXBQIeN5Q0xq1-gpCWa6Rtabiw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#21201c] to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="inline-block px-2 py-1 rounded bg-primary-container/20 text-[#fa5b31] text-[10px] font-bold uppercase tracking-widest">Active Engagement</span>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold">Aesthetic Labs</h4>
+<p class="text-secondary/60 text-xs mt-2 leading-relaxed">Collaborating on Gen-AI visual frameworks for human-centric interfaces.</p>
+<div class="mt-6 flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-surface-container overflow-hidden">
+<img alt="team" class="w-full h-full object-cover" data-alt="headshot of a creative director" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB38x2B2RhUrszIHdvUa1Urg-x20mEqOf205LwVTLKFIz92xrbGAzdFHAac59Tfmv-fNOFDrDgD-IrJcMa5qjy3AVKTTUW4MYIy5m4v9l_AxfB365D3c37Lo9ozML0w7yiKgcWsSgB8CK6vhygwKlZxKEy0Y76EmUpbbeRvD3dEJ-J4zpLgKB6rtYD3baIpBX7WgvLg5CE1yU4t_Tp5TJsSHL8_8cjzWrLtmDo_Q1955X3cXZ493jgNj3-OdpzZc7ET3aTzzgR266M"/>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-surface-container overflow-hidden">
+<img alt="team" class="w-full h-full object-cover" data-alt="headshot of a lead designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4nKtfqK3jQyA1yubQqiWxzt_VPUDSHPpEXTpllHiLGrmN4uRgfqgAHdnqHHRfTgevexkm6rqM-so7HQcV9E9ROC4qdpdrR0gwUddSaAVd5ucEkCb1RuIVE42s_RsbXoWgUC7y_8SQcCnewjsBXQRTvl8KKhFT0nN17x9Vylo9cuWUOWLDK_MHellVwVtU7W_VPrSCTkQw1JLEeY7_rM-AsRbjzeqRJ4SnT8_xUe0KqMXOf3MH2eMZUB2x83nuFYoZoL77Ikxq3EU"/>
+</div>
+</div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest">124 Days Remaining</span>
+</div>
+</div>
+</div>
+<!-- Insight Card -->
+<div class="col-span-2 glass-panel p-6 rounded-2xl border border-white/5 bg-gradient-to-br from-primary-container/5 to-transparent">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-bold text-sm">AI Kinetic Insight</h4>
+<p class="text-secondary/70 text-xs mt-1">Based on your training nodes, you are 89% ready for "Quantum Core" placements.</p>
+</div>
+<span class="material-symbols-outlined text-[#fa5b31]">auto_awesome</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Internship History Table -->
+<div class="mt-12">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold uppercase tracking-tighter">Engagement History</h3>
+<div class="flex gap-2">
+<button class="bg-surface-container-low px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest text-secondary/60 hover:text-white transition-colors border border-white/5">Export Log</button>
+<button class="bg-surface-container-low px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest text-secondary/60 hover:text-white transition-colors border border-white/5">Filter Status</button>
+</div>
+</div>
+<div class="glass-panel rounded-2xl overflow-hidden border border-white/5">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-8 py-5 text-[10px] font-bold text-secondary/40 uppercase tracking-[0.2em]">Partner Node</th>
+<th class="px-8 py-5 text-[10px] font-bold text-secondary/40 uppercase tracking-[0.2em]">Placement Role</th>
+<th class="px-8 py-5 text-[10px] font-bold text-secondary/40 uppercase tracking-[0.2em]">Interval</th>
+<th class="px-8 py-5 text-[10px] font-bold text-secondary/40 uppercase tracking-[0.2em]">Status</th>
+<th class="px-8 py-5 text-[10px] font-bold text-secondary/40 uppercase tracking-[0.2em] text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<tr class="hover:bg-white/[0.02] transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center font-black text-xs text-secondary">OS</div>
+<div>
+<p class="font-bold text-sm">OmniSystems</p>
+<p class="text-[10px] text-secondary/40 uppercase tracking-widest">Global Corp</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5 font-medium text-sm">Security Architect Intern</td>
+<td class="px-8 py-5 text-secondary/60 text-xs">Jan 2024 - Mar 2024</td>
+<td class="px-8 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-black bg-[#fa5b31]/10 text-[#fa5b31] uppercase tracking-widest">Approved</span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-secondary/40 hover:text-white transition-colors">more_horiz</button>
+</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center font-black text-xs text-secondary">VX</div>
+<div>
+<p class="font-bold text-sm">Vortex Dynamics</p>
+<p class="text-[10px] text-secondary/40 uppercase tracking-widest">Research Wing</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5 font-medium text-sm">Flow Analysis Assistant</td>
+<td class="px-8 py-5 text-secondary/60 text-xs">Nov 2023 - Dec 2023</td>
+<td class="px-8 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-black bg-white/10 text-secondary uppercase tracking-widest">Pending</span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-secondary/40 hover:text-white transition-colors">more_horiz</button>
+</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors group">
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center font-black text-xs text-secondary">KL</div>
+<div>
+<p class="font-bold text-sm">Kineto Logic</p>
+<p class="text-[10px] text-secondary/40 uppercase tracking-widest">Industrial Tech</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5 font-medium text-sm">Mechanical Lead Intern</td>
+<td class="px-8 py-5 text-secondary/60 text-xs">Aug 2023 - Oct 2023</td>
+<td class="px-8 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-black bg-error/10 text-error uppercase tracking-widest">Rejected</span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="material-symbols-outlined text-secondary/40 hover:text-white transition-colors">more_horiz</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</body></html>

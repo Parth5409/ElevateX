@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>elevateX | Kinetic Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#3c0800",
+                    "surface-container-low": "#1c1b19",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#171c1f",
+                    "secondary-fixed-dim": "#cfc5ba",
+                    "outline": "#aa8981",
+                    "on-surface": "#e6e2dd",
+                    "on-secondary-fixed-variant": "#4c463d",
+                    "surface-container-lowest": "#0f0e0b",
+                    "on-primary-fixed-variant": "#881f00",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#141311",
+                    "secondary-container": "#4c463d",
+                    "on-tertiary-fixed-variant": "#42474b",
+                    "tertiary-fixed-dim": "#c2c7cb",
+                    "on-background": "#e6e2dd",
+                    "tertiary-fixed": "#dee3e7",
+                    "surface-container": "#21201c",
+                    "on-primary": "#611300",
+                    "on-tertiary-container": "#252a2e",
+                    "secondary": "#cfc5ba",
+                    "error-container": "#93000a",
+                    "tertiary": "#c2c7cb",
+                    "surface-bright": "#3a3936",
+                    "primary-container": "#fa5b31",
+                    "surface": "#141311",
+                    "tertiary-container": "#8c9195",
+                    "background": "#141311",
+                    "surface-container-highest": "#363531",
+                    "secondary-fixed": "#ebe1d5",
+                    "surface-tint": "#ffb4a1",
+                    "on-primary-container": "#550f00",
+                    "primary-fixed-dim": "#ffb4a1",
+                    "primary": "#ffb4a1",
+                    "surface-variant": "#363531",
+                    "primary-fixed": "#ffdbd1",
+                    "on-surface-variant": "#e3beb5",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#e6e2dd",
+                    "on-secondary-container": "#bdb4a9",
+                    "on-secondary": "#353028",
+                    "on-tertiary": "#2c3134",
+                    "surface-container-high": "#2b2a27",
+                    "outline-variant": "#5a413a",
+                    "on-secondary-fixed": "#201b14",
+                    "inverse-primary": "#b22b00",
+                    "inverse-on-surface": "#32302d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(33, 32, 28, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(170, 137, 129, 0.1);
+        }
+        .ai-glow {
+            box-shadow: 0 0 15px rgba(250, 91, 49, 0.1);
+            border: 1px solid rgba(250, 91, 49, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-white">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-white/5 bg-[#1c1b19] flex flex-col z-50 overflow-y-auto">
+<div class="p-8">
+<h1 class="text-2xl font-black tracking-tighter text-[#fa5b31]">elevateX</h1>
+<p class="font-['Inter'] font-bold uppercase tracking-widest text-[10px] text-tertiary mt-1">Kinetic Intelligence</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-[#21201c] text-[#fa5b31] rounded-lg border-l-4 border-[#fa5b31] font-medium text-sm tracking-tight transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">psychology</span> Intelligence
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 rounded-lg font-medium text-sm tracking-tight transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">work</span> Placements
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 rounded-lg font-medium text-sm tracking-tight transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">school</span> Training
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 rounded-lg font-medium text-sm tracking-tight transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">leaderboard</span> Analytics
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 rounded-lg font-medium text-sm tracking-tight transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-[#21201c] p-4 rounded-xl border border-white/5 mb-4">
+<p class="text-xs text-secondary mb-2 uppercase tracking-widest font-bold">Pro Access</p>
+<button class="w-full py-2 bg-primary-container text-white text-xs font-bold rounded-lg hover:brightness-110 transition-all">Upgrade to Pro</button>
+</div>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 rounded-lg font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">help_outline</span> Support
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 z-40 bg-[#141311]/60 backdrop-blur-3xl flex justify-between items-center px-8">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary text-lg">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-[10px] font-bold tracking-widest text-on-surface focus:ring-1 focus:ring-primary-container" placeholder="SEARCH INTELLIGENCE..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-white/10 rounded-full p-2 transition-all text-secondary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:bg-white/10 rounded-full p-2 transition-all text-secondary">
+<span class="material-symbols-outlined">bolt</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border border-white/10">
+<img class="w-full h-full object-cover" data-alt="portrait of a young professional man with short dark hair and a confident expression in high-key studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv_PniHOpYS-HarTHlV8ux_MLIhD-qHamxaTka4PD2cuBJpZSklcZnfkts4FMHaF7OTY1g_dxYJeYUVtMfhbd_a-YIj2fr6kv7undVQ_YoPQFsQ7NCCBFhQvahCQQ7-t8S3iVwacnNTb5yZZE54Jp28wy-w8s0aTJ198Nig1-sJxlAoG4Ve0BdPpGOpaMOnUdQB3ImFlhcGC4dWxq90bccFI9qT1hzkpB5bfTlTHNqWAN7FPLQZsIEj7ZoO7aDBgzfnz81V6Otgss"/>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<div class="pt-24 pb-12 px-8">
+<div class="grid grid-cols-12 gap-8">
+<!-- Welcome & Profile Column -->
+<div class="col-span-8 space-y-8">
+<!-- Hero Welcome Card -->
+<section class="glass-card rounded-2xl p-8 relative overflow-hidden flex items-end min-h-[320px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="abstract flowing 3D waves in deep charcoal and vibrant orange colors with soft grain and cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-iLMexgWftDZ_gI0UwYkhX3SoWLZEVeRUmQ4A5hNJgdMSw2DT7LH4peLWHH_wGcOKK2vJiOwKLIvcsv1_Q1DbsW87k_L4Yme5Fmz9g3aJxRbG9lpAjH4PK1HuAmZq_ilqMsEqyJ1alrIvhzfKdSQXIwr8vxM0sBFKyxGqRhJRZINbRAE_2as6qB4UTuco-BBFJ0yDWEFnOJKEorLhiVlGn-4kFrQcX2O0ItLqz9yoHVw9xpnCw6BAAVYX6kT9ek7rakYMTTvWhfc"/>
+<div class="relative z-10 w-full flex justify-between items-end">
+<div class="max-w-md">
+<span class="bg-primary-container/10 text-primary-container px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-4 inline-block">System Status: Active</span>
+<h2 class="text-5xl font-black tracking-tighter text-white leading-none">Welcome back, Alex.</h2>
+<p class="text-secondary mt-4 text-lg">Your kinetic engine is optimized. 4 new placement matches are ready for review.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="relative h-28 w-28 flex items-center justify-center">
+<svg class="h-full w-full -rotate-90">
+<circle cx="56" cy="56" fill="transparent" r="50" stroke="rgba(250,91,49,0.1)" stroke-width="8"></circle>
+<circle cx="56" cy="56" fill="transparent" r="50" stroke="#fa5b31" stroke-dasharray="314" stroke-dashoffset="47" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<span class="absolute text-2xl font-black text-white">85%</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-tertiary mt-3">Profile Completion</span>
+</div>
+</div>
+</section>
+<!-- Placement Status Bento -->
+<div class="grid grid-cols-2 gap-8">
+<div class="glass-card rounded-2xl p-6 ai-glow">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary-container text-3xl">work_history</span>
+<span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-[10px] font-bold">SHORTLISTED</span>
+</div>
+<h3 class="text-tertiary text-xs font-bold uppercase tracking-widest mb-1">Active Placement</h3>
+<p class="text-xl font-bold text-white mb-2">TechNova Systems</p>
+<p class="text-secondary text-sm">Senior AI Research Analyst</p>
+<div class="mt-6 flex items-center gap-2">
+<div class="h-1 flex-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[75%]"></div>
+</div>
+<span class="text-[10px] font-bold text-tertiary">STAGE 3/4</span>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-6">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">psychology_alt</span>
+<span class="text-primary-container text-[10px] font-bold">NEXT UP</span>
+</div>
+<h3 class="text-tertiary text-xs font-bold uppercase tracking-widest mb-1">Recommended Training</h3>
+<p class="text-xl font-bold text-white mb-2">Neural Architectures</p>
+<p class="text-secondary text-sm">Estimated effort: 12 hours</p>
+<button class="mt-6 w-full py-2 bg-white/5 hover:bg-white/10 text-white text-xs font-bold rounded-lg transition-all border border-white/10">Resume Module</button>
+</div>
+</div>
+</div>
+<!-- Intelligence Stream Sidebar -->
+<div class="col-span-4">
+<div class="glass-card rounded-2xl p-6 h-full flex flex-col">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-lg font-black tracking-tight text-white">Intelligence Stream</h3>
+<span class="material-symbols-outlined text-primary-container">sensors</span>
+</div>
+<div class="space-y-6 flex-1 overflow-y-auto pr-2 custom-scrollbar">
+<div class="relative pl-6 border-l border-primary-container/20 pb-2">
+<div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full bg-primary-container"></div>
+<p class="text-[10px] font-bold text-primary-container uppercase tracking-widest">Just Now</p>
+<p class="text-sm font-bold text-white mt-1">Skill Gap Analyzed</p>
+<p class="text-xs text-secondary mt-1">AI detected missing proficiency in 'TensorFlow 2.0' based on TechNova requirements.</p>
+</div>
+<div class="relative pl-6 border-l border-white/10 pb-2">
+<div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full bg-surface-container-highest"></div>
+<p class="text-[10px] font-bold text-tertiary uppercase tracking-widest">2 hours ago</p>
+<p class="text-sm font-bold text-white mt-1">New Match Identified</p>
+<p class="text-xs text-secondary mt-1">QuantumLogic Inc. matches 92% of your core kinetic intelligence profile.</p>
+</div>
+<div class="relative pl-6 border-l border-white/10 pb-2">
+<div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full bg-surface-container-highest"></div>
+<p class="text-[10px] font-bold text-tertiary uppercase tracking-widest">Yesterday</p>
+<p class="text-sm font-bold text-white mt-1">Profile Indexed</p>
+<p class="text-xs text-secondary mt-1">Your training history has been synchronized across the global placement node.</p>
+</div>
+<div class="relative pl-6 border-l border-white/10">
+<div class="absolute -left-1.5 top-0 h-3 w-3 rounded-full bg-surface-container-highest"></div>
+<p class="text-[10px] font-bold text-tertiary uppercase tracking-widest">Sep 24</p>
+<p class="text-sm font-bold text-white mt-1">Leaderboard Peak</p>
+<p class="text-xs text-secondary mt-1">You reached the Top 5% in AI Logic problem solving nationwide.</p>
+</div>
+</div>
+<button class="mt-8 w-full text-center text-[10px] font-bold text-tertiary hover:text-white uppercase tracking-widest py-2 border-t border-white/5 pt-4 transition-colors">
+                            View Full Activity
+                        </button>
+</div>
+</div>
+<!-- Bottom Metric Cards -->
+<div class="col-span-12 grid grid-cols-4 gap-8">
+<div class="bg-surface-container-low rounded-2xl p-6 border-b-2 border-primary-container/20">
+<div class="flex justify-between items-center mb-2">
+<span class="text-tertiary text-[10px] font-bold uppercase tracking-widest">Intelligence Score</span>
+<span class="material-symbols-outlined text-primary-container text-lg" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-black text-white">2,840</span>
+<span class="text-xs font-bold text-green-400">+12%</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-6 border-b-2 border-white/5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-tertiary text-[10px] font-bold uppercase tracking-widest">New Matches</span>
+<span class="material-symbols-outlined text-tertiary text-lg">hub</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-black text-white">04</span>
+<span class="text-[10px] font-bold text-primary-container px-1.5 py-0.5 bg-primary-container/10 rounded">NEW</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-6 border-b-2 border-white/5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-tertiary text-[10px] font-bold uppercase tracking-widest">Global Ranking</span>
+<span class="material-symbols-outlined text-tertiary text-lg">military_tech</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-black text-white">#142</span>
+<span class="text-xs font-bold text-secondary">of 12k</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-6 border-b-2 border-white/5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-tertiary text-[10px] font-bold uppercase tracking-widest">Monthly Goal</span>
+<span class="material-symbols-outlined text-tertiary text-lg">flag</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-black text-white">92%</span>
+<div class="w-16 h-2 bg-surface-container rounded-full overflow-hidden ml-auto">
+<div class="bg-primary-container h-full w-[92%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB - Restricted to Dashboard Home -->
+<button class="fixed bottom-8 right-8 h-14 w-14 rounded-full bg-primary-container text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-transform z-50">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</button>
+</body></html>

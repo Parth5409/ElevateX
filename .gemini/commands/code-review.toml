@@ -1,0 +1,36 @@
+description = "Code review — local uncommitted changes or GitHub PR (pass PR number/URL for PR mode)"
+
+prompt = """
+Comprehensive security and quality review of changes.
+
+## Mode Selection
+If {{args}} contains a PR number or URL, fetch the PR diff using `gh pr diff`.
+Otherwise, review local changes using `git diff HEAD`.
+
+## Changed Files
+!{git diff --name-only HEAD}
+
+## Review Checklist
+Read each changed file in full. Check for:
+
+**Security Issues (CRITICAL):**
+- Hardcoded credentials, API keys, tokens
+- SQL injection vulnerabilities
+- XSS vulnerabilities
+- Missing input validation
+
+**Code Quality (HIGH):**
+- Functions > 50 lines
+- Files > 800 lines
+- Missing error handling
+
+**Best Practices (MEDIUM):**
+- Mutation patterns (use immutable instead)
+- Missing tests for new code
+
+## Report Findings
+Generate a report categorized by severity: CRITICAL, HIGH, MEDIUM, LOW.
+Provide file locations, issue descriptions, and suggested fixes.
+
+Arguments: {{args}}
+"""

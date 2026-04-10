@@ -1,0 +1,1 @@
+Check the Plan mentioned in the @.gemini/AITHON_Master_Execution_Plan.md  and i have already created the basic architecure of required things. And start working on the features mentioned in the plan. First use @architect and @planner agents to properly plan in phases and consult me before starting to code. Create a full fledged plan now
