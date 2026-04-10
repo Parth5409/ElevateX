@@ -1,0 +1,293 @@
+{
+    "api_contract": {
+        "authentication": [
+            {
+                "description": "Authenticate user and receive JWT",
+                "method": "POST",
+                "endpoint": "/api/auth/login",
+                "used_in_files": [
+                    "src/context/AuthContext.jsx",
+                    "src/pages/auth/Login.jsx"
+                ],
+                "request_payload": {
+                    "email": "string",
+                    "password": "string",
+                    "role": "string ('student' | 'tpo')"
+                },
+                "response_payload": {
+                    "_id": "string",
+                    "email": "string",
+                    "role": "string",
+                    "token": "string"
+                }
+            },
+            {
+                "description": "Register a new user",
+                "method": "POST",
+                "endpoint": "/api/auth/signup",
+                "used_in_files": [
+                    "src/context/AuthContext.jsx",
+                    "src/pages/auth/Signup.jsx"
+                ],
+                "request_payload": {
+                    "email": "string",
+                    "password": "string",
+                    "role": "string ('student' | 'tpo')",
+                    "fullName": "string"
+                },
+                "response_payload": {
+                    "_id": "string",
+                    "email": "string",
+                    "role": "string",
+                    "token": "string"
+                }
+            }
+        ],
+        "student_portal": [
+            {
+                "description": "Fetch the current student's full profile",
+                "method": "GET",
+                "endpoint": "/api/student/profile",
+                "used_in_files": [
+                    "src/pages/student/StudentProfile.jsx",
+                    "src/pages/student/StudentDashboard.jsx"
+                ],
+                "request_payload": {},
+                "response_payload": {
+                    "_id": "string",
+                    "user_id": "string",
+                    "full_name": "string",
+                    "branch": "string",
+                    "cgpa": "number",
+                    "skills": [
+                        "string"
+                    ],
+                    "domain_interests": [
+                        "string"
+                    ],
+                    "projects": [
+                        {
+                            "title": "string",
+                            "tech_stack": [
+                                "string"
+                            ],
+                            "description": "string",
+                            "status": "string"
+                        }
+                    ],
+                    "placement_status": "string"
+                }
+            },
+            {
+                "description": "Update the student profile",
+                "method": "PUT",
+                "endpoint": "/api/student/profile",
+                "used_in_files": [
+                    "src/pages/student/StudentProfile.jsx"
+                ],
+                "request_payload": {
+                    "full_name": "string",
+                    "branch": "string",
+                    "cgpa": "number",
+                    "skills": [
+                        "string"
+                    ],
+                    "projects": "array"
+                },
+                "response_payload": {
+                    "success": "boolean",
+                    "updated_profile": "object"
+                }
+            },
+            {
+                "description": "Fetch current student's internship logs",
+                "method": "GET",
+                "endpoint": "/api/student/internships",
+                "used_in_files": [
+                    "src/pages/student/StudentInternships.jsx"
+                ],
+                "request_payload": {},
+                "response_payload": [
+                    {
+                        "_id": "string",
+                        "company_name": "string",
+                        "role": "string",
+                        "duration_months": "number",
+                        "status": "string ('Pending' | 'Approved' | 'Rejected')",
+                        "date": "string"
+                    }
+                ]
+            },
+            {
+                "description": "Submit a new internship request",
+                "method": "POST",
+                "endpoint": "/api/student/internships",
+                "used_in_files": [
+                    "src/pages/student/StudentInternships.jsx"
+                ],
+                "request_payload": {
+                    "company_name": "string",
+                    "domain": "string",
+                    "duration_months": "number",
+                    "brief": "string"
+                },
+                "response_payload": {
+                    "success": "boolean",
+                    "internship_id": "string"
+                }
+            },
+            {
+                "description": "Fetch AI Mentor feedback and placement notifications",
+                "method": "GET",
+                "endpoint": "/api/student/notifications",
+                "used_in_files": [
+                    "src/pages/student/StudentAIMentor.jsx"
+                ],
+                "request_payload": {},
+                "response_payload": [
+                    {
+                        "_id": "string",
+                        "type": "string ('Invite' | 'Skill_Feedback')",
+                        "title": "string",
+                        "message": "string",
+                        "missing_skills": [
+                            "string"
+                        ],
+                        "action_item": "string",
+                        "matchScore": "number (optional)",
+                        "date": "string"
+                    }
+                ]
+            }
+        ],
+        "tpo_faculty_portal": [
+            {
+                "description": "Fetch high-level analytics for TPO Dashboard",
+                "method": "GET",
+                "endpoint": "/api/tpo/analytics",
+                "used_in_files": [
+                    "src/pages/tpo/TpoDashboard.jsx"
+                ],
+                "request_payload": {},
+                "response_payload": {
+                    "total_students": "number",
+                    "avg_cgpa": "number",
+                    "active_drives": "number",
+                    "avg_package_lpa": "number",
+                    "placement_data": [
+                        {
+                            "name": "string",
+                            "value": "number",
+                            "color": "string"
+                        }
+                    ],
+                    "skills_distribution": [
+                        {
+                            "name": "string",
+                            "score": "number"
+                        }
+                    ]
+                }
+            },
+            {
+                "description": "Fetch all student profiles for talent directory",
+                "method": "GET",
+                "endpoint": "/api/tpo/students",
+                "used_in_files": [
+                    "src/pages/tpo/TpoDirectory.jsx"
+                ],
+                "request_payload": {
+                    "filter": "string (optional)"
+                },
+                "response_payload": [
+                    {
+                        "_id": "string",
+                        "full_name": "string",
+                        "branch": "string",
+                        "cgpa": "number",
+                        "placement_status": "string ('Placed' | 'Unplaced')"
+                    }
+                ]
+            },
+            {
+                "description": "Fetch all pending/approved internships globally",
+                "method": "GET",
+                "endpoint": "/api/tpo/internships",
+                "used_in_files": [
+                    "src/pages/tpo/TpoInternshipApprovals.jsx"
+                ],
+                "request_payload": {},
+                "response_payload": [
+                    {
+                        "_id": "string",
+                        "student_id": "string",
+                        "company_name": "string",
+                        "role": "string",
+                        "duration_months": "number",
+                        "status": "string"
+                    }
+                ]
+            },
+            {
+                "description": "Update the status of a specific student's internship",
+                "method": "PATCH",
+                "endpoint": "/api/tpo/internships/:id",
+                "used_in_files": [
+                    "src/pages/tpo/TpoInternshipApprovals.jsx"
+                ],
+                "request_payload": {
+                    "status": "string ('Approved' | 'Rejected')"
+                },
+                "response_payload": {
+                    "success": "boolean"
+                }
+            }
+        ],
+        "ai_engine": [
+            {
+                "description": "Process a Job Description text using LangChain and return matched students",
+                "method": "POST",
+                "endpoint": "/api/ai/match-jd",
+                "used_in_files": [
+                    "src/pages/tpo/TpoJdMatchmaker.jsx",
+                    "src/services/apiMock.js"
+                ],
+                "request_payload": {
+                    "jdText": "string"
+                },
+                "response_payload": {
+                    "matches": [
+                        {
+                            "student": {
+                                "_id": "string",
+                                "full_name": "string",
+                                "branch": "string",
+                                "cgpa": "number",
+                                "skills": [
+                                    "string"
+                                ]
+                            },
+                            "match_percentage": "number"
+                        }
+                    ]
+                }
+            },
+            {
+                "description": "Generate LangChain skill-gap feedback for an unplaced student",
+                "method": "POST",
+                "endpoint": "/api/ai/generate-feedback",
+                "used_in_files": [
+                    "src/services/apiMock.js"
+                ],
+                "request_payload": {
+                    "studentId": "string",
+                    "jdText": "string"
+                },
+                "response_payload": {
+                    "success": "boolean",
+                    "notification_id": "string"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,461 @@
+{
+  "info": {
+    "name": "AIThon API Collection",
+    "description": "Complete API verification suite for the TPO Matchmaker backend. Includes automated token extraction script on Login.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Authentication",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"new.student@aithon.edu\",\n    \"role\": \"student\",\n    \"password\": \"password123\",\n    \"fullName\": \"John Doe\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/signup",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "signup"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Login (Auto-set Token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.token) {",
+                  "    pm.environment.set(\"token\", jsonData.token);",
+                  "    console.log(\"Token automatically set to environment variable\");",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"tpo@aithon.edu\",\n    \"password\": \"tpopassword123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Student APIs",
+      "item": [
+        {
+          "name": "Get Notifications",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/student/notifications",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "student",
+                "notifications"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create or Update Profile",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"full_name\": \"Postman Tester\",\n    \"branch\": \"Computer Science\",\n    \"cgpa\": 9.5,\n    \"skills\": [\"Python\", \"FastAPI\", \"MongoDB\"],\n    \"domain_interests\": [\"AI\", \"Backend\", \"Cloud\"],\n    \"projects\": [\n        {\n            \"title\": \"AI Matchmaker\",\n            \"tech_stack\": [\"FastAPI\", \"LangChain\"],\n            \"description\": \"Built the backend logic\",\n            \"link\": \"https://github.com\"\n        }\n    ],\n    \"placement_status\": \"Unplaced\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/student/profile",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "student",
+                "profile"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Fetch My Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/student/profile",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "student",
+                "profile"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Submit Internship",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"company_name\": \"Google\",\n    \"domain\": \"Software Engineering Intern\",\n    \"duration_months\": 3,\n    \"brief\": \"https://drive.google.com/cert\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/student/internships",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "student",
+                "internships"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get My Internships",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/student/internships",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "student",
+                "internships"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. TPO Analytics APIs",
+      "item": [
+        {
+          "name": "Get TPO Dashboard Stats",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/tpo/analytics",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tpo",
+                "analytics"
+              ]
+            }
+          }
+        },
+        {
+          "name": "List All Students (Filterable)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/tpo/students?status=Unplaced&branch=Computer Science&cgpa_gt=8.0",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tpo",
+                "students"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "Unplaced"
+                },
+                {
+                  "key": "branch",
+                  "value": "Computer Science"
+                },
+                {
+                  "key": "cgpa_gt",
+                  "value": "8.0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Internships",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/tpo/internships?status=Pending",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tpo",
+                "internships"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "Pending"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Approve Internship",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"status\": \"Approved\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/tpo/internships/<replace-with-internship-id>",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tpo",
+                "internships",
+                "<replace-with-internship-id>"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Send TPO Invite",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Interview for Software Engineering Intern\",\n    \"message\": \"Please join the Google Meet link attached.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/tpo/invite/<replace-with-student-id>",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tpo",
+                "invite",
+                "<replace-with-student-id>"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. AI Engine APIs",
+      "item": [
+        {
+          "name": "Match JD against Profiles",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"jdText\": \"Looking for a Junior Software Engineer with 1 year Python experience. Pluses: FastAPI, PyDantic, React, and MongoDB knowledge.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai/match-jd",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ai",
+                "match-jd"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Generate Skill-Gap Feedback",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"jdText\": \"Looking for a Junior Software Engineer with Python experience. Pluses: FastAPI, PyDantic, MongoDB, Docker, AWS.\",\n    \"studentId\": \"<replace-with-student-id>\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai/generate-feedback",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ai",
+                "generate-feedback"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}

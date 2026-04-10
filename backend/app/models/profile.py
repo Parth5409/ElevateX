@@ -15,7 +15,7 @@ class Project(BaseModel):
     link: Optional[str] = None
 
 class StudentProfile(BaseModel):
-    user_id: str
+    user_id: Optional[str] = None
     full_name: str
     branch: str
     cgpa: float

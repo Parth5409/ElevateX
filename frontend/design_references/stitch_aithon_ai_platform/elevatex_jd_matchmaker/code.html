@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary-fixed": "#3c0800",
+                "surface-container-low": "#1c1b19",
+                "on-error": "#690005",
+                "on-tertiary-fixed": "#171c1f",
+                "secondary-fixed-dim": "#cfc5ba",
+                "outline": "#aa8981",
+                "on-surface": "#e6e2dd",
+                "on-secondary-fixed-variant": "#4c463d",
+                "surface-container-lowest": "#0f0e0b",
+                "on-primary-fixed-variant": "#881f00",
+                "error": "#ffb4ab",
+                "surface-dim": "#141311",
+                "secondary-container": "#4c463d",
+                "on-tertiary-fixed-variant": "#42474b",
+                "tertiary-fixed-dim": "#c2c7cb",
+                "on-background": "#e6e2dd",
+                "tertiary-fixed": "#dee3e7",
+                "surface-container": "#21201c",
+                "on-primary": "#611300",
+                "on-tertiary-container": "#252a2e",
+                "secondary": "#cfc5ba",
+                "error-container": "#93000a",
+                "tertiary": "#c2c7cb",
+                "surface-bright": "#3a3936",
+                "primary-container": "#fa5b31",
+                "surface": "#141311",
+                "tertiary-container": "#8c9195",
+                "background": "#141311",
+                "surface-container-highest": "#363531",
+                "secondary-fixed": "#ebe1d5",
+                "surface-tint": "#ffb4a1",
+                "on-primary-container": "#550f00",
+                "primary-fixed-dim": "#ffb4a1",
+                "primary": "#ffb4a1",
+                "surface-variant": "#363531",
+                "primary-fixed": "#ffdbd1",
+                "on-surface-variant": "#e3beb5",
+                "on-error-container": "#ffdad6",
+                "inverse-surface": "#e6e2dd",
+                "on-secondary-container": "#bdb4a9",
+                "on-secondary": "#353028",
+                "on-tertiary": "#2c3134",
+                "surface-container-high": "#2b2a27",
+                "outline-variant": "#5a413a",
+                "on-secondary-fixed": "#201b14",
+                "inverse-primary": "#b22b00",
+                "inverse-on-surface": "#32302d"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(33, 32, 28, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(194, 199, 203, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(250, 91, 49, 0.15);
+        }
+        .ai-pulse {
+            position: relative;
+        }
+        .ai-pulse::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: inherit;
+            background: linear-gradient(45deg, #fa5b31, transparent, #fa5b31);
+            z-index: -1;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-white/5 bg-[#1c1b19] dark:bg-[#1c1b19] flex flex-col h-screen overflow-y-auto z-50">
+<div class="p-8">
+<h1 class="text-2xl font-black tracking-tighter text-[#fa5b31]">elevateX</h1>
+<p class="font-['Inter'] font-medium text-[10px] tracking-tight uppercase text-secondary/50 mt-1">Kinetic Intelligence</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 font-['Inter'] font-medium text-sm tracking-tight hover:scale-[1.02] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span>Intelligence</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#21201c] text-[#fa5b31] rounded-lg border-l-4 border-[#fa5b31] font-['Inter'] font-medium text-sm tracking-tight hover:scale-[1.02] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span>Placements</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 font-['Inter'] font-medium text-sm tracking-tight hover:scale-[1.02] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span>Training</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 font-['Inter'] font-medium text-sm tracking-tight hover:scale-[1.02] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 font-['Inter'] font-medium text-sm tracking-tight hover:scale-[1.02] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto p-4">
+<div class="glass-panel p-4 rounded-xl mb-4 text-center">
+<p class="text-xs font-bold text-white mb-2">Upgrade to Pro</p>
+<button class="w-full py-2 bg-primary-container text-white text-xs font-black rounded-lg hover:brightness-110 transition-all">ACTIVATE</button>
+</div>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 font-['Inter'] font-medium text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Support</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 z-40 bg-[#141311]/60 backdrop-blur-3xl flex justify-between items-center px-8 w-full">
+<div class="flex items-center gap-6 flex-1">
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary/40 text-sm" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search talent, roles, or intel..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-white/10 rounded-full p-2 transition-all text-secondary">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-white/10 rounded-full p-2 transition-all text-[#fa5b31]">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-primary-container/20">
+<img alt="User Profile" data-alt="professional portrait of a tech executive woman with a sharp confident expression, minimalist background, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbpR5yd50Q0x9xys-QyiukaIgPNxAetWGDUREx4SpwIBbLZIwaYAlZaLuCQzGKYf2gbZaZ31ptM4pP4SccsYmxHF7e21-DdouCfLdH8c-eXWKgqvO8CjQMEFfA5LQgd1GX0FQJqJPAcPYH5b0OZCuuABt_2UItIO3Wysp9LjkPAkbPi3oyGvz0Hij9PrgGnW5UMBVt-CtrW_YZieWipd3B17kpBLVCwrv-05YDHxhlcfAMJ4nn8kez5QD-x_JsyndkYSyp5G5SY_k"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 px-12 pb-12 min-h-screen">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="font-['Inter'] font-bold uppercase tracking-widest text-[10px] text-[#fa5b31] mb-2 block">Placement Matchmaker</span>
+<h2 class="text-5xl font-extrabold tracking-tighter text-white">Find Your <span class="text-primary-container">Perfect Talent.</span></h2>
+</div>
+<div class="text-right">
+<p class="text-secondary/60 text-sm max-w-xs italic">Kinetic intelligence mapping job architectures to individual talent signatures.</p>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Left: Job Description Input -->
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<div class="glass-panel rounded-2xl p-8 neon-glow relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="description">description</span>
+</div>
+<label class="block text-xs font-black uppercase tracking-widest text-secondary mb-4">Input Job Architecture</label>
+<textarea class="w-full h-96 bg-surface-container-low/50 border-none rounded-xl p-6 text-on-surface placeholder:text-secondary/30 focus:ring-2 focus:ring-primary-container/20 transition-all font-mono text-sm leading-relaxed" placeholder="Paste the Job Description here... AI will extract core competencies, kinetic potential, and culture fit requirements automatically."></textarea>
+<div class="mt-6 flex justify-between items-center">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20">AI EXTRACTOR ACTIVE</span>
+</div>
+<button class="bg-primary-container text-white px-8 py-3 rounded-xl font-black text-sm tracking-tighter hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary-container/20">
+                            RUN MATCHMAKER
+                        </button>
+</div>
+</div>
+<div class="glass-panel rounded-2xl p-6 flex items-center gap-6">
+<div class="h-12 w-12 bg-surface-container-highest rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white">Kinetic Scoring Enabled</h4>
+<p class="text-xs text-secondary/60">Using V4.2 Neural Models for behavioral alignment.</p>
+</div>
+</div>
+</div>
+<!-- Right: Results & Analysis -->
+<div class="col-span-12 lg:col-span-7 space-y-8">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-black text-white flex items-center gap-3">
+                        Top 10 Potential Matches
+                        <span class="text-xs font-normal text-secondary/40 bg-surface-container-low px-2 py-0.5 rounded">Processed 1,240 Profiles</span>
+</h3>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container rounded-lg text-secondary hover:text-white"><span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span></button>
+<button class="p-2 bg-surface-container rounded-lg text-secondary hover:text-white"><span class="material-symbols-outlined text-sm" data-icon="download">download</span></button>
+</div>
+</div>
+<!-- Match Table/Cards -->
+<div class="space-y-4">
+<!-- Match 1 (The Highlighted Match) -->
+<div class="glass-panel p-1 rounded-2xl border-primary-container/30 ai-pulse shadow-xl shadow-primary-container/5 group">
+<div class="bg-surface-container-low rounded-[14px] p-6 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="h-14 w-14 rounded-xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Arjun Vardhan" data-alt="close up headshot of a professional Indian man with a kind expression and sharp business attire, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQneiCfI8LUzsDuE0LfZBxu9JR3ReOEP6S_dAGnVgMtEHX6cqLSnu68lx8GHXkVx7mxp0S2Az_5clyIbPWTDGZqDPlH2Xm3Es1UfOl2OPh3ylNP6406ADJLPhhjjzemfygDGwPOce04K07l9nhz6yB8wXMKe4ow97yco390CF-OBkf2-Ogi-j2PS8xTIAwop5v6bdJl7B5sfE85t1lBhEipbGjrU0n9XezMeCNWWKGWbifb0nkTMib61EAcC8Y2Jxph0uZ0ykhgE"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary-container text-[8px] font-black text-white px-1.5 py-0.5 rounded border border-surface">PRO</div>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white">Arjun Vardhan</h4>
+<p class="text-xs text-secondary/50 font-medium">Senior Engineering Lead • 8 Years Exp</p>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="text-right">
+<div class="text-[10px] font-black uppercase text-primary mb-1">Match Score</div>
+<div class="flex items-center gap-2">
+<div class="w-32 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container" style="width: 98%"></div>
+</div>
+<span class="text-xl font-black text-white italic">98%</span>
+</div>
+</div>
+<button class="h-10 w-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary-container hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Match 2 -->
+<div class="glass-panel rounded-2xl p-6 flex items-center justify-between hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl overflow-hidden opacity-80 group-hover:opacity-100 transition-all">
+<img alt="Sarah Jenkins" data-alt="professional portrait of a young black woman in a modern office environment, wearing glasses and a warm smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZqkaLn4RF-Ilxsp34tVMftntJYcxp1lEKNi7s82wGlUR0UrWe-P2kEDtsQws76WM8dGnXUMwUguihq2KJqk-IBHnXFE62LQx4T4mf6F_a1MiGq-UhRTcQl1g2wGXJ4yv6M_LV7-sU82uEUg0nfapO3uZCBBhaKLRbSlkkRG-yZKx0flboUzs7b22BOxK7uKzD9Ls6QB-kYSQNOrwEuyso2-v7dPMhsUh0woyq_VW4XIlFKZxJoVzDkpIVQqwhjq7jRRorvbbtLYE"/>
+</div>
+<div>
+<h4 class="text-md font-bold text-white">Sarah Jenkins</h4>
+<p class="text-xs text-secondary/50">Product Systems Architect</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="w-20 h-1 bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary/40" style="width: 92%"></div>
+</div>
+<span class="text-sm font-bold text-secondary">92%</span>
+</div>
+<span class="material-symbols-outlined text-secondary/30" data-icon="keyboard_arrow_right">keyboard_arrow_right</span>
+</div>
+</div>
+<!-- Match 3 -->
+<div class="glass-panel rounded-2xl p-6 flex items-center justify-between hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl overflow-hidden opacity-80 group-hover:opacity-100 transition-all">
+<img alt="Marcus Thorne" data-alt="candid portrait of a professional man in his 40s in a bright loft office, looking thoughtful, blurred urban background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLW1jEwTRmkBXpk5M-uxOoWPM7EZdfH5iA6bhu7sbp0j2DzYgjVBlLKRM5YzgnI5zW3V6PWftbWoqfMOnmp7Mo-sDs7gfxaHcO0NhGWH8QSvrpzmuQbrwRiwgMRX_1gCUmNsrcwYgBxo4jTLMf_CJJnkq7-sWTxubQRW35x4eYxnF2_iCP0jplQ_gKDbqbcvtIKHtFK_4i-wa-f0GbWEzYr-rHIOSWKLx2MFP9bkekgA2tUFsXgB2yWcMVVZ7JhWu_aIZhBMgQSBg"/>
+</div>
+<div>
+<h4 class="text-md font-bold text-white">Marcus Thorne</h4>
+<p class="text-xs text-secondary/50">DevOps Specialist</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="w-20 h-1 bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary/40" style="width: 87%"></div>
+</div>
+<span class="text-sm font-bold text-secondary">87%</span>
+</div>
+<span class="material-symbols-outlined text-secondary/30" data-icon="keyboard_arrow_right">keyboard_arrow_right</span>
+</div>
+</div>
+</div>
+<!-- AI Insight Panel (Why this match?) -->
+<div class="glass-panel rounded-2xl p-8 bg-gradient-to-br from-surface-container to-surface-container-low border-l-4 border-primary-container">
+<div class="flex items-center gap-3 mb-6">
+<div class="h-8 w-8 rounded-lg bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="hub">hub</span>
+</div>
+<h4 class="text-sm font-black uppercase tracking-widest text-white">Why Arjun Vardhan? <span class="text-primary text-[10px] ml-2 lowercase font-mono">/ai_analysis_report</span></h4>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<div>
+<p class="text-[10px] font-bold text-secondary/40 uppercase mb-1">Kinetic Alignment</p>
+<p class="text-xs text-on-surface leading-relaxed">Arjun demonstrates a <span class="text-primary">94% velocity match</span> for your high-growth environment. His career trajectory shows exponential complexity handling in similar tech stacks.</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-secondary/40 uppercase mb-1">Skill Synthesis</p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-[10px] border border-white/5">Distributed Systems</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-[10px] border border-white/5">Team Mentorship</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-[10px] border border-white/5">Go/Rust</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/50 rounded-xl p-4 border border-white/5">
+<p class="text-[10px] font-bold text-secondary/40 uppercase mb-3">Critical Intel</p>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="trending_up">trending_up</span>
+<p class="text-xs">Propensity to lead is in the top 2% of cohort.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="psychology">psychology</span>
+<p class="text-xs">Highly compatible with current team neural signatures.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="verified">verified</span>
+<p class="text-xs">Verified expert in Scalability Architectures.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-white/5 flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="h-6 w-6 rounded-full border-2 border-surface bg-primary-container text-[8px] flex items-center justify-center font-bold">AI</div>
+<div class="h-6 w-6 rounded-full border-2 border-surface bg-secondary text-[8px] flex items-center justify-center font-bold text-background">DS</div>
+</div>
+<p class="text-[10px] text-secondary/30 italic italic">Model: elevateX-Nexus-V4 • Confidence 0.992</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="flex items-center gap-3 bg-white text-background px-6 py-4 rounded-2xl font-black shadow-2xl hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+            CREATE NEW MATCH
+        </button>
+</div>
+</body></html>

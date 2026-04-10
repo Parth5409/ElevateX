@@ -9,10 +9,10 @@ from datetime import datetime
 from typing import Optional
 
 class Internship(BaseModel):
-    student_id: str
+    student_id: Optional[str] = None
     company_name: str
-    role: str
+    domain: str
     duration_months: int
-    certificate_url: Optional[str] = None
+    brief: Optional[str] = None
     status: str = "Pending"
-    submitted_at: datetime = Field(default_factory=datetime.utcnow)
+    date: datetime = Field(default_factory=datetime.utcnow)

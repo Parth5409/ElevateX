@@ -35,6 +35,12 @@ class AuthService:
     async def create_user(self, user_in: UserCreate):
         users_collection = get_collection("users")
         
+        if len(user_in.password.encode('utf-8')) > 72:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Password cannot be longer than 72 characters"
+            )
+
         # Check if user exists
         existing_user = await users_collection.find_one({"email": user_in.email})
         if existing_user:

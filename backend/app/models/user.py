@@ -16,6 +16,11 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     password: str
+    fullName: Optional[str] = None
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
 
 class UserInDB(UserBase):
     password_hash: str

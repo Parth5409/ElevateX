@@ -3,13 +3,13 @@ version: '3.8'
 services:
   backend:
     build:
-      context: ./backend
+      context: .
       dockerfile: Dockerfile
     container_name: aithon-backend
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app
+      - .:/app
     environment:
       - MONGO_URI=mongodb://mongodb:27017
       - DB_NAME=aithon_db
@@ -21,8 +21,9 @@ services:
       - aithon-network
 
   mongodb:
-    image: mongo:latest
+    image: mongo:7.0
     container_name: aithon-mongodb
+    restart: always
     ports:
       - "27017:27017"
     volumes:

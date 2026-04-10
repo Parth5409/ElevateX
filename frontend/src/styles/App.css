@@ -1,0 +1,21 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color, #f9fafb);
+  color: var(--text-color, #111827);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color, #3b82f6);
+}
+
+p {
+  font-size: 1.25rem;
+  color: var(--text-muted, #6b7280);
+}

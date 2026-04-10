@@ -27,4 +27,9 @@ async def close_mongo_connection():
 
 # Helper to get collections
 def get_collection(name: str):
+    if db.db is None:
+        raise RuntimeError(
+            f"Database was not initialized before accessing collection '{name}'. "
+            "Ensure connect_to_mongo() was called or the app startup event processed."
+        )
     return db.db[name]

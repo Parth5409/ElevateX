@@ -8,18 +8,30 @@
 
 from fastapi import APIRouter
 from pydantic import BaseModel
+from typing import Dict, Any
+
+from app.services.ai_service import ai_service
+from app.services.student_service import student_service
 
 router = APIRouter()
 
 class JDMapperRequest(BaseModel):
-    jd_text: str
+    jdText: str
+
+class FeedbackRequest(BaseModel):
+    jdText: str
+    studentId: str
 
 @router.post("/match-jd")
 async def match_job_description(request: JDMapperRequest):
-    # This will call ai_service.match_jd
-    pass
+    return await ai_service.match_jd(request.jdText)
 
 @router.post("/generate-feedback")
-async def generate_skill_feedback():
-    # This will call ai_service.generate_feedback
-    pass
+async def generate_skill_feedback(request: FeedbackRequest):
+    profile = await student_service.get_student_profile(request.studentId)
+    if not profile:
+        return {"success": False, "detail": "Student not found"}
+        
+    result = await ai_service.generate_feedback(profile, request.jdText)
+    # Ensure standard response
+    return {"success": True, "feedback": result.get("feedback"), "notification_id": "gen_feedback_id"}

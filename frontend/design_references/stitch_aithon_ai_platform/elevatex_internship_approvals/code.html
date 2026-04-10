@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>elevateX | Internship Approvals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#3c0800",
+                    "surface-container-low": "#1c1b19",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#171c1f",
+                    "secondary-fixed-dim": "#cfc5ba",
+                    "outline": "#aa8981",
+                    "on-surface": "#e6e2dd",
+                    "on-secondary-fixed-variant": "#4c463d",
+                    "surface-container-lowest": "#0f0e0b",
+                    "on-primary-fixed-variant": "#881f00",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#141311",
+                    "secondary-container": "#4c463d",
+                    "on-tertiary-fixed-variant": "#42474b",
+                    "tertiary-fixed-dim": "#c2c7cb",
+                    "on-background": "#e6e2dd",
+                    "tertiary-fixed": "#dee3e7",
+                    "surface-container": "#21201c",
+                    "on-primary": "#611300",
+                    "on-tertiary-container": "#252a2e",
+                    "secondary": "#cfc5ba",
+                    "error-container": "#93000a",
+                    "tertiary": "#c2c7cb",
+                    "surface-bright": "#3a3936",
+                    "primary-container": "#fa5b31",
+                    "surface": "#141311",
+                    "tertiary-container": "#8c9195",
+                    "background": "#141311",
+                    "surface-container-highest": "#363531",
+                    "secondary-fixed": "#ebe1d5",
+                    "surface-tint": "#ffb4a1",
+                    "on-primary-container": "#550f00",
+                    "primary-fixed-dim": "#ffb4a1",
+                    "primary": "#ffb4a1",
+                    "surface-variant": "#363531",
+                    "primary-fixed": "#ffdbd1",
+                    "on-surface-variant": "#e3beb5",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#e6e2dd",
+                    "on-secondary-container": "#bdb4a9",
+                    "on-secondary": "#353028",
+                    "on-tertiary": "#2c3134",
+                    "surface-container-high": "#2b2a27",
+                    "outline-variant": "#5a413a",
+                    "on-secondary-fixed": "#201b14",
+                    "inverse-primary": "#b22b00",
+                    "inverse-on-surface": "#32302d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(33, 32, 28, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(170, 137, 129, 0.1);
+        }
+        .ai-glow {
+            box-shadow: 0 0 15px rgba(250, 91, 49, 0.2);
+            border: 1px solid rgba(250, 91, 49, 0.3);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #363531; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background text-on-surface flex min-h-screen overflow-hidden">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-white/5 bg-[#1c1b19] flex flex-col z-50">
+<div class="p-8">
+<h1 class="text-2xl font-black tracking-tighter text-[#fa5b31]">elevateX</h1>
+<p class="font-['Inter'] font-bold uppercase tracking-widest text-[10px] text-secondary mt-1">Kinetic Intelligence</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 rounded-lg transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Intelligence</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#21201c] text-[#fa5b31] rounded-lg border-l-4 border-[#fa5b31] transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Placements</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 rounded-lg transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Training</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 rounded-lg transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#cfc5ba] hover:bg-white/5 rounded-lg transition-transform duration-200 hover:scale-[1.02]" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="p-6 mt-auto">
+<div class="bg-[#21201c] p-4 rounded-xl mb-4">
+<p class="text-[10px] font-bold text-[#fa5b31] uppercase tracking-widest mb-1">Status</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-[#fa5b31] animate-pulse"></div>
+<span class="text-xs text-secondary">AI Core Active</span>
+</div>
+</div>
+<button class="w-full py-3 px-4 bg-primary-container text-white font-bold rounded-lg text-sm hover:scale-[1.02] active:scale-95 transition-all">
+                Upgrade to Pro
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 flex flex-col h-screen relative">
+<!-- TopNavBar Shell -->
+<header class="h-16 flex justify-between items-center px-8 w-full bg-[#141311]/60 backdrop-blur-3xl z-40">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary text-sm">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-xs focus:ring-1 focus:ring-primary-container/50" placeholder="Search candidates..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#cfc5ba] hover:bg-white/10 rounded-full p-2 transition-all cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-[#cfc5ba] hover:bg-white/10 rounded-full p-2 transition-all cursor-pointer">bolt</span>
+</div>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-primary-container/30">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of a recruitment manager in a dark suit with a clean neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzTzZzoqbXQP-dnpgwjgfzk8_hCvLLFoWyxvFjmzA8UTpEW1R35umBpu_DE53w-_pbCwYPeZx0UAsb_NkzWaOnSYJpSdn2vISxovoQbEJDemq9D40HR3g4Q-yrTWWsRS0UDzs-IV1q_Cf90ySY31oJ3t73T-2un2WietIC1xT9kBk-GN2NjjYl5tZfRWXMJzgMQutr5VA10xPzR_l4Z6XniLqUVGjNigIJM0wUdHiMRAjLw0AQNgycZFBXozeXACMuMP0pUiHr1tw"/>
+</div>
+</div>
+</header>
+<!-- Dynamic Content Body -->
+<div class="flex-1 flex overflow-hidden p-8 gap-8">
+<!-- Left: Submissions List -->
+<section class="w-[40%] flex flex-col gap-6 overflow-y-auto pr-2">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-['Inter'] font-bold uppercase tracking-widest text-[10px] text-primary-container">Internship Portal</span>
+<h2 class="text-3xl font-extrabold tracking-tight mt-1">Pending Approvals</h2>
+</div>
+<span class="text-secondary text-xs font-medium">8 Submissions</span>
+</div>
+<!-- Active Card: Arjun Malhotra -->
+<div class="glass-panel p-6 rounded-xl ai-glow transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young male engineering student with a focused and professional expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo0pDjJK6-y_4KajPOv-QXrRDYjNUiulzPyl3ey57VtGLe2h0BgGr4utUU3E3G5_yAVsCHKIcMG_8oydFZ6DAlzI2aynGIqt7qPkaWJqCx16Ix5zUlN9LZ99twUqZN5r3LLlbDk4APiuuZ9taeAewJtOBD0PpDdWlN1knd3c28RdO2iC-8dQdc4HRNyFK84x9pcXNvgJ46iW03Vdv0ADN1I2vlnQ5jPBwnYmBpV-3f6T8fO9B95tAfg6GCucKnWAYzHqh7aAXeFQQ"/>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-tight">Arjun Malhotra</h3>
+<p class="text-xs text-secondary mt-0.5">Software Eng Intern @ Meta</p>
+</div>
+</div>
+<div class="bg-primary-container/10 px-2 py-1 rounded text-[10px] font-bold text-primary-container tracking-wider uppercase">98% Match</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-xs">
+<span class="text-tertiary">Document Type</span>
+<span class="text-on-surface font-medium">Completion Certificate</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-tertiary">Submitted</span>
+<span class="text-on-surface font-medium">2 hours ago</span>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-white/5 flex gap-3">
+<button class="flex-1 py-2 bg-primary-container text-on-primary-container text-xs font-bold rounded-lg hover:brightness-110 transition-all">Verify</button>
+<button class="flex-1 py-2 bg-transparent border border-outline-variant/30 text-on-surface text-xs font-bold rounded-lg hover:bg-white/5 transition-all">Reject</button>
+</div>
+</div>
+<!-- Card: Sarah Jenkins -->
+<div class="bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Smiling young woman with professional attire in a bright office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7i8BloNOw4Ilh-lPNTqavAymBLrNHmkn0jHmxl6pbE8YHeWhIx0R4QZ8Of1VBAT1-uuZH-lY-cEj5bCgl31drrC7g4cDERUhBkmyMwn574IzZLrIlzSriTbbE5n7C8qZowP77GMhSu3IdfMo3JcLv2VAqKgP2z7nx_6D-lE15C-76C_ttcwySr5WXMc0_GvrOXUvJEe1kbyVI0Nzh7FCOGGUo8skuglmfHPs6cCgRfsz0YkxJwlbCPmC-Nhnx-YXSXoq4CJOXPFU"/>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-tight">Sarah Jenkins</h3>
+<p class="text-xs text-secondary mt-0.5">Product Design @ Figma</p>
+</div>
+</div>
+<div class="bg-tertiary-container/20 px-2 py-1 rounded text-[10px] font-bold text-tertiary-fixed-dim tracking-wider uppercase">82% Match</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-xs">
+<span class="text-tertiary">Document Type</span>
+<span class="text-on-surface font-medium">Offer Letter</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-tertiary">Submitted</span>
+<span class="text-on-surface font-medium">5 hours ago</span>
+</div>
+</div>
+</div>
+<!-- Card: Marcus Thorne -->
+<div class="bg-surface-container-low p-6 rounded-xl hover:bg-surface-container transition-all cursor-pointer opacity-70">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young man wearing glasses and a smart casual sweater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF-C0WdrRgTF9k7VnmkCAx5aIu9dkkDvsulYms-FNMqQwSAmZer0MHBHU1A4pBPvbMDIyAFuQzqCrsHzLBy9yfac7gddxJD3g19NoJbuT8-xgXr7T7WCq7ltlJjetDBsovNBwsrfavH63WdZllzNdrSxAGQHhZYfISaNa8G0ks9hB6xyIwswvMwojxKaWnqJKENZtpi4-gBpXluXgTLoZGnKIoouiqYrfHA-J_-Kkhy5G4V5jaXQm3rdo1kUyR94NPep5PDpzepzs"/>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-tight">Marcus Thorne</h3>
+<p class="text-xs text-secondary mt-0.5">Analyst @ Goldman Sachs</p>
+</div>
+</div>
+<div class="bg-error-container/30 px-2 py-1 rounded text-[10px] font-bold text-error tracking-wider uppercase">Validation Pending</div>
+</div>
+</div>
+</section>
+<!-- Right: Document Preview Panel -->
+<section class="flex-1 flex flex-col gap-6">
+<!-- AI Validation Status Bar -->
+<div class="glass-panel p-4 rounded-2xl flex items-center justify-between ai-glow">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">bolt</span>
+</div>
+<div>
+<p class="text-xs font-bold text-white uppercase tracking-widest">Kinetic AI Agent</p>
+<p class="text-[10px] text-secondary">Analyzing certificate authenticity and metadata correlation...</p>
+</div>
+</div>
+<div class="flex items-center gap-6 pr-4">
+<div class="text-right">
+<p class="text-xs font-bold text-primary-container">Scanning...</p>
+<div class="w-32 h-1 bg-surface-container-highest rounded-full mt-1 overflow-hidden">
+<div class="w-[75%] h-full bg-primary-container"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Preview Area -->
+<div class="flex-1 glass-panel rounded-3xl relative overflow-hidden flex flex-col">
+<div class="p-6 border-b border-white/5 flex items-center justify-between">
+<div>
+<h4 class="font-bold text-lg">Document_Preview_Arjun_M.pdf</h4>
+<p class="text-[10px] text-tertiary uppercase tracking-tighter">Verified by Smart-Scan 4.0</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-white/5 rounded-lg text-secondary">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+<button class="p-2 hover:bg-white/5 rounded-lg text-secondary">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest m-6 rounded-2xl relative flex items-center justify-center p-12">
+<div class="w-full h-full max-w-2xl bg-white rounded shadow-2xl relative p-12 text-zinc-800 flex flex-col items-center border-[12px] border-zinc-100">
+<div class="w-16 h-16 bg-zinc-200 rounded-full mb-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-zinc-400 text-4xl">workspace_premium</span>
+</div>
+<h2 class="text-2xl font-serif font-bold text-center border-b-2 border-zinc-200 pb-4 mb-8 w-full">CERTIFICATE OF COMPLETION</h2>
+<p class="text-sm font-serif italic mb-2">This is to certify that</p>
+<p class="text-3xl font-serif font-bold mb-8">Arjun Malhotra</p>
+<p class="text-center text-xs leading-relaxed max-w-md text-zinc-500">
+                                has successfully completed a professional internship in Software Engineering at Meta Platforms, Inc. spanning from May 2023 to August 2023. During this period, the candidate demonstrated exceptional proficiency in React and Distributed Systems.
+                            </p>
+<div class="mt-auto w-full flex justify-between px-8 pb-4">
+<div class="text-center">
+<div class="w-32 h-px bg-zinc-300 mb-2"></div>
+<p class="text-[8px] uppercase tracking-widest font-bold">Director of Talent</p>
+</div>
+<div class="text-center">
+<div class="w-32 h-px bg-zinc-300 mb-2"></div>
+<p class="text-[8px] uppercase tracking-widest font-bold">Program Manager</p>
+</div>
+</div>
+<!-- AI Overlay Elements -->
+<div class="absolute inset-0 border-2 border-primary-container/20 pointer-events-none rounded"></div>
+<div class="absolute top-4 right-4 bg-primary-container/90 text-white text-[8px] px-2 py-1 font-bold rounded">VALID SIGNATURE DETECTED</div>
+</div>
+<!-- Floating Insights Bento -->
+<div class="absolute bottom-8 right-8 w-64 flex flex-col gap-3">
+<div class="glass-panel p-4 rounded-xl ai-glow">
+<p class="text-[10px] font-bold text-primary-container uppercase mb-2">AI Integrity Check</p>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-400 text-sm">verified_user</span>
+<span class="text-[11px]">Metadata matches user ID logs</span>
+</div>
+<div class="flex items-center gap-3 mt-1">
+<span class="material-symbols-outlined text-green-400 text-sm">qr_code_2</span>
+<span class="text-[11px]">QR Code origin authenticated</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Visual Polish: Background Gradients -->
+<div class="fixed top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary-container/5 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="fixed bottom-[-10%] left-[20%] w-[30%] h-[30%] bg-tertiary-container/5 blur-[100px] rounded-full pointer-events-none"></div>
+</body></html>

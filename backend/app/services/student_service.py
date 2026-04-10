@@ -35,20 +35,20 @@ class StudentService:
             n["_id"] = str(n["_id"])
         return notifications
 
+    async def submit_internship(self, user_id: str, internship: Internship):
+        internships_collection = get_collection("internships")
+        internship_dict = internship.model_dump()
+        internship_dict["student_id"] = user_id
+        
+        result = await internships_collection.insert_one(internship_dict)
+        return {"status": "success", "internship_id": str(result.inserted_id)}
+
+    async def get_internships(self, user_id: str):
+        internships_col = get_collection("internships")
+        cursor = internships_col.find({"student_id": user_id})
+        internships = await cursor.to_list(length=100)
+        for i in internships:
+            i["_id"] = str(i["_id"])
+        return internships
+
 student_service = StudentService()
-
-# ---
-
-# backend/app/services/tpo_service.py
-
-# This service handles administrative tasks for the TPO faculty.
-# It includes student analytics and internship approval logic.
-
-class TPOService:
-    async def get_analytics_summary(self):
-        pass
-
-    async def approve_internship(self, internship_id, status):
-        pass
-
-tpo_service = TPOService()
