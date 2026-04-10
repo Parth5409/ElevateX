@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+motor
+pydantic-settings
+python-dotenv
+langchain
+langchain-google-genai
+python-multipart
+passlib[bcrypt]
+python-jose[cryptography]
+pymongo
+email-validator
+chromadb
+langchain-community

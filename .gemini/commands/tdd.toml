@@ -1,0 +1,20 @@
+description = "Test-Driven Development specialist enforcing write-tests-first methodology."
+
+prompt = """
+This command invokes the **tdd-guide** agent to enforce test-driven development with comprehensive coverage.
+
+## TDD Workflow
+
+1. **RED** - Write a failing test first.
+2. **GREEN** - Implement minimal code to make the test pass.
+3. **REFACTOR** - Improve the code while keeping tests green.
+
+## Mandatory Requirements
+- Stay strict on RED -> GREEN -> REFACTOR.
+- Keep tests first, coverage explicit, and checkpoint evidence clear.
+- Aim for 80%+ test coverage.
+
+Apply the `tdd-workflow` skill for detailed guidance.
+
+User Request: {{args}}
+"""
